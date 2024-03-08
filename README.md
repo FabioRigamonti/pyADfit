@@ -18,4 +18,14 @@ The accretion disc model is the alpha-disc model (see [Shakura & Sunyaev 1976](h
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/FabioRigamonti/pyADfit/
+git clone https://github.com/FabioRigamonti/pyADfit.git
+
+Install the required dependencies using pip:
+
+```bash
+pip install -r requirements.txt
+
+Or install it directly with pip:
+
+```bash
+pip install pyADfit
