@@ -18,4 +18,4 @@ The accretion disc model is the alpha-disc model (see [Shakura & Sunyaev 1976](h
 Clone this repository to your local machine:
 
 ```bash
-git clone [https://github.com/your_username/accretion_disk_model.git](https://github.com/FabioRigamonti/pyADfit/)https://github.com/FabioRigamonti/pyADfit/)
+git clone https://github.com/FabioRigamonti/pyADfit/
