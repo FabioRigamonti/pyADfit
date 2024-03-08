@@ -19,13 +19,16 @@ Clone this repository to your local machine:
 
 ```bash
 git clone https://github.com/FabioRigamonti/pyADfit.git
+```
 
 Install the required dependencies using pip:
 
 ```bash
 pip install -r requirements.txt
+```
 
 Or install it directly with pip:
 
 ```bash
 pip install pyADfit
+```
