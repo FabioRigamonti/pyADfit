@@ -42,3 +42,22 @@ To fit quasar accretion disc data, follow these steps:
 3. Define your own "read_data" function to read and the path to the configuration file
 4. Import the "read_config_and_launch" function from "disc_launch"
 5. Run the parameter estimation by calling the "read_config_and_launch"
+
+## Example
+
+'''python
+from disc_launch import read_config_and_launch
+import matplotlib.pyplot as plt 
+
+def read_data(file_path):
+  your function here
+
+  return xdata,ydata,yerr
+
+if __name__=='__main__':
+  config_path = './config.yaml'
+
+  post_df,best = read_config_and_launch(config_path,read_data)
+  plt.show()
+'''
+  
