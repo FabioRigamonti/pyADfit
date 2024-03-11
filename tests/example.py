@@ -2,6 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from pyADfit import read_config_and_launch
+# from disc_launch import read_config_and_lauch  # if pyADfit was not installed via pip 
 
 def read_data(input_path):
     """
