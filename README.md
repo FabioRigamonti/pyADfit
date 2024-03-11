@@ -50,7 +50,7 @@ To fit quasar accretion disc data, follow these steps:
 ```python
 
 #from disc_launch import read_config_and_launch # if installed via github
-from pyADfit import read_config_and_launch      # if installed via pip
+from pyADfit.disc_launch import read_config_and_launch      # if installed via pip
 import matplotlib.pyplot as plt 
 
 def read_data(file_path):
