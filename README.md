@@ -45,7 +45,8 @@ To fit quasar accretion disc data, follow these steps:
 
 ## Example
 
-'''python
+```python
+
 from disc_launch import read_config_and_launch
 import matplotlib.pyplot as plt 
 
@@ -59,5 +60,6 @@ if __name__=='__main__':
 
   post_df,best = read_config_and_launch(config_path,read_data)
   plt.show()
-'''
+```
+
   
