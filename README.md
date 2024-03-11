@@ -26,7 +26,7 @@ Move into the directory where you have downloaded the repository and install the
 ```bash
 pip install -r requirements.txt
 ```
-Star your fitting process by importing the proper libraries (see the example below or run the provided test)
+Start your fitting process by importing the proper libraries (see the example below or run the provided test)
 
 Or install it directly with pip:
 
