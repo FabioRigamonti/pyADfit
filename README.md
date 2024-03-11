@@ -13,6 +13,7 @@ The accretion disc model is the alpha-disc model (see [Shakura & Sunyaev 1976](h
 - nessai
 - h5py
 - pandas
+- setuptools
 
 ## Installation
 Clone this repository to your local machine:
