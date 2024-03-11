@@ -21,11 +21,12 @@ Clone this repository to your local machine:
 git clone https://github.com/FabioRigamonti/pyADfit.git
 ```
 
-Install the required dependencies using pip:
+Move into the directory where you have downloaded the repository and install the required dependencies using pip:
 
 ```bash
 pip install -r requirements.txt
 ```
+Star your fitting process by importing the proper libraries (see the example below or run the provided test)
 
 Or install it directly with pip:
 
@@ -47,7 +48,8 @@ To fit quasar accretion disc data, follow these steps:
 
 ```python
 
-from disc_launch import read_config_and_launch
+#from disc_launch import read_config_and_launch # if installed via github
+from pyADfit import read_config_and_launch      # if installed via pip
 import matplotlib.pyplot as plt 
 
 def read_data(file_path):
