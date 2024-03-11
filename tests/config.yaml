@@ -1,0 +1,90 @@
+# Configuration file for Accretion Disc Fitting
+
+# Parameters for fitting
+Parameters:
+  # Black hole mass (logarithmic scale)
+  Mbh:
+    name: log10Mbh                        # Name used as reference in the code
+    LaTex_name: $\log_{10}{M_{\rm{BH}}}$  # LaTeX name used for plotting
+    bounds: [4,15]                        # Boundaries for flat prior
+    vary: true                            # Whether or not to vary the parameter during the fit
+    value: 0.                             # If vary: false, value of the fixed parameter used
+
+  # Mass accretion rate (logarithmic scale relative to Eddington rate)
+  Mdot:
+    name: log10Mdot
+    LaTex_name: $\log_{10}{\dot{M}/\dot{M_{\rm{Edd}}}}$
+    bounds: [-3,2]
+    vary: true
+    value: 0.
+
+  # Inclination angle (in degrees)
+  theta:
+    name: theta
+    LaTex_name: $\theta$
+    bounds: [0, 90]
+    vary: False
+    value: 30     
+
+# Hyperparameters for the disc model
+Hyperparameter_disc_model:
+  # Inner radius of the accretion disc in units of the Schwarzschild radius
+  Rin:
+    name: Rin
+    value: 3.0
+  # Outer radius of the accretion disc in units of the Schwarzschild radius
+  Rfin:
+    name: Rfin
+    value: 10000.0
+  # Minimum frequency for bolometric luminosity integration 
+  nu_min:
+    name: nu_min
+    value: 10**10
+  # Maximum frequency for bolometric luminosity integration 
+  nu_max:
+    name: nu_max
+    value: 10**16.5
+
+# Nested sampling estimators
+Hyperparameter_estimator:
+  # Raynest settings check https://github.com/wdpozzo/raynest/blob/main/raynest/raynest.py for details
+  raynest:
+    use: false
+    verbose: 2
+    nnest: 1
+    nensemble: 1
+    nlive: 300
+    maxmcmc: 300
+    nslice: 0
+    nhamiltonian: 0
+    resume: True
+    periodic_checkpoint_interval: 600
+
+  # CPnest settings check https://github.com/johnveitch/cpnest/blob/master/cpnest/cpnest.py for details.
+  # Not recommended. 
+  CPnest:
+    use: false
+    verbose: 2
+    nlive: 300
+    maxmcmc: 300
+    nslice: 0
+    nhamiltonian: 0
+    nthreads: 1
+    resume: True
+    periodic_checkpoint_interval: 600
+
+  # Nessai settings check https://nessai.readthedocs.io/en/latest/ for details.
+  nessai:
+    use: true
+    nlive: 300
+    prior_sampling: false
+    n_pool: 1
+    resume_file: resume
+    checkpointing: True
+    checkpoint_on_training: True
+    checkpoint_interval: 600
+
+# Settings for input/output paths
+Settings:
+  input_path: ./VIK_lum_data.txt   # Path to input data file
+  output_path: run_test/     # Path for output files
